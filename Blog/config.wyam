@@ -16,3 +16,7 @@ Pipelines.Add("Home",
 	Razor(),
 	WriteFiles(".html")
 );
+
+Pipelines.Add("Assets",
+	CopyFiles("Assets/")
+);
