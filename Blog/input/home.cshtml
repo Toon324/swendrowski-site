@@ -2,19 +2,34 @@
 <hr/>
 <p>Hi, this paragraph has a little bit about me - it's neat</p>
 <h2>Posts</h2>
-@foreach(var doc in Documents["Posts"].OrderBy(x => x["Title"]))
+
+@{
+	var colors = new string[] {"red", "pink", "purple", "deep-purple", "indigo", "blue",
+     "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange",
+     "deep-orange", "brown", "grey", "blue-grey"};
+	var index = 0;
+}
+@while (index < colors.Count()) {
+foreach(var doc in Documents["Posts"].OrderBy(x => x["Title"]))
 {
-	<div class="row">
-        <div class="col-md-6">
-            <div class="card blue-grey darken-1">
+    if (index < colors.Count()) {
+	var baseColor = colors[index];
+	index++;
+
+        <div class="col-md-3 col-xs-6">
+            <div class="card @baseColor darken-1 hoverable">
+                <div class="@baseColor lighten-2 text-center">
+                    <small>@doc["Published"]</small>
+                </div>
                 <div class="card-content white-text">
                     <span class="card-title">@doc["Title"]</span>
-                    <p>Published - @doc["Published"]</p>
+                    <a class="btn-floating btn-large waves-effect waves-light @baseColor accent-2"><i class="material-icons">star</i></a>
                 </div>
-                <div class="card-action">
-                    <a href="@doc["PostFile"]">Read More</a>
+                <div class="card-action @baseColor accent-4">
+                    <a class="elegant-color-text waves-effect" href="@doc["PostFile"]">Read More</a>
                 </div>
             </div>
         </div>
-    </div>
+    }
+}
 }
