@@ -1,3 +1,7 @@
+#n -p Wyam.Modules.Yaml
+#n -p Wyam.Modules.Razor
+#n -p Wyam.Modules.Markdown
+
 Pipelines.Add("Posts",
 	ReadFiles("posts/*.md"),  // Read all markdown files in the "posts" directory
 	FrontMatter(Yaml()),  // Load any frontmatter and parse it as YAML markup
