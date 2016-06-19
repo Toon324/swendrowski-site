@@ -24,3 +24,7 @@ Pipelines.Add("Home",
 Pipelines.Add("Assets",
 	CopyFiles("Assets/")
 );
+
+Pipelines.Add("Images",
+	CopyFiles("img/")
+);

@@ -6,7 +6,7 @@
         @Html.Partial("_Categories.cshtml")
     </text>
         }*@
-<div class="background-row grey darken-1">
+<div class="background-row grey darken-1 mask pattern-7">
     @using (Html.Bootstrap().Container().Begin())
     {
         using (var row = Html.Bootstrap().GridRow().Begin())
@@ -15,36 +15,40 @@
             {
                 <!--Featured Image-->
                 <div class="view overlay hm-white-slight z-depth-2">
-                    <img src="http://mdbootstrap.com/images/slides/slide%20(16).jpg" class="img-fluid" alt="">
+                    <img src="@Metadata["PromoImageUrl"]" class="img-fluid" alt="">
                     <a>
                         <div class="mask"></div>
                     </a>
                 </div>
 
                 <!--Post data-->
-                <div class="jumbotron m-1 text-xs-center">
-                    <h2 class="h2-responsive">@Metadata["Title"]</h2>
-                    <hr>
-                    <p>Cody Swendrowski - @Metadata["Published"]</p>
+                <div class="jumbotron card m-1">
+                    <div class="card-block">
+                        <h2 class="h2-responsive">@Metadata["Title"]</h2>
+                        <hr>
+                        <p class="text-muted">Cody Swendrowski - @Metadata["Published"]</p>
 
-                    <!--Social shares-->
-                    <div class="social-counters">
-
-                        <!--Twitter-->
-                        <a class="btn btn-tw">
-                            <i class="fa fa-twitter left"></i>
-                            <span class="hidden-md-down">Twitter</span>
-                        </a>
-
-                        <!--Google+-->
-                        <a class="btn btn-gplus">
-                            <i class="fa fa-google-plus left"></i>
-                            <span class="hidden-md-down">Google+</span>
-                        </a>
-
+                        <article class="blog-post card-text text-fluid">
+                            @Html.Raw(Metadata["Post"])
+                        </article>
                     </div>
-                    <!--/.Social shares-->
 
+                    @*<div class="card-data">
+                        <ul>
+                            <li><i class="fa fa-clock-o"></i> 05/10/2015</li>
+                            <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                            <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                        </ul>
+                    </div>*@
+
+                    <div class="card-action social-counters">
+                        <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
+
+                        <a type="button" class="btn-floating btn-large btn-gplus"><i class="fa fa-google-plus"></i></a>
+
+                        <a type="button" class="btn-floating btn-large btn-li"><i class="fa fa-linkedin"></i></a>
+                    </div>
                 </div>
             }
         }
