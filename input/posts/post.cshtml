@@ -1,4 +1,34 @@
-<h1>@Metadata["Title"]</h1>
-<h2>@Metadata["Published"]</h2>
-<hr />
-@Html.Raw(Metadata["Post"])
+@using FluentBootstrap
+
+@*using (row.GridColumn().SetSm(4).Begin())
+        {
+    <text>
+        @Html.Partial("_Categories.cshtml")
+    </text>
+        }*@
+
+<div class="background-row grey darken-1">
+    @using (Html.Bootstrap().Container().Begin())
+    {
+        using (var row = Html.Bootstrap().GridRow().Begin())
+        {
+            using (row.GridColumn().Begin())
+            {
+                <div class="card post red">
+                    <div class="card-block">
+                        <div class="card-title">
+                            <h1>@Metadata["Title"]</h1>
+                            <h2>@Metadata["Published"]</h2>
+                        </div>
+                        <article class="card-content red lighten-5">
+                            @Html.Raw(Metadata["Post"])
+                        </article>
+                        <div class="card-action red accent-4">
+                            Share this I guess?
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>

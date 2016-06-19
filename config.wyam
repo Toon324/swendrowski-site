@@ -1,6 +1,6 @@
 #n -p Wyam.Modules.Yaml
-#n -p Wyam.Modules.Razor
 #n -p Wyam.Modules.Markdown
+#n -p FluentBootstrap.Wyam
 
 Pipelines.Add("Posts",
 	ReadFiles("posts/*.md"),  // Read all markdown files in the "posts" directory
