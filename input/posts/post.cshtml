@@ -1,12 +1,6 @@
 @using FluentBootstrap
 
-@*using (row.GridColumn().SetSm(4).Begin())
-        {
-    <text>
-        @Html.Partial("_Categories.cshtml")
-    </text>
-        }*@
-<div class="background-row grey darken-1 mask pattern-7">
+<div class="background-row row grey darken-1 mask pattern-7">
     <div class="container m-1">
         @using (var row = Html.Bootstrap().GridRow().Begin())
         {
@@ -17,7 +11,9 @@
                     @Html.Bootstrap().Placeholder(1170, 330)
                     @*<img src="@Metadata["PromoImageUrl"]" class="img-fluid" alt="">*@
                 </div>
-
+            }
+            using (row.GridColumn().Begin())
+            {
                 <!--Post data-->
                 <div class="jumbotron card grey lighten-5">
                     <div class="card-block">
@@ -25,19 +21,10 @@
                         <hr>
                         <p class="text-muted">Cody Swendrowski - @Metadata["Published"]</p>
 
-                        <article class="blog-post card-text text-fluid ">
+                        <article class="blog-post flow-text">
                             @Html.Raw(Metadata["Post"])
                         </article>
                     </div>
-
-                    @*<div class="card-data">
-                            <ul>
-                                <li><i class="fa fa-clock-o"></i> 05/10/2015</li>
-                                <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
-                                <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
-                                <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
-                            </ul>
-                        </div>*@
 
                     <div class="card-action social-counters">
                         <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
