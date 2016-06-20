@@ -11,11 +11,24 @@ As a general rule-of-thumb, methods should be no longer than 15 lines long.
 
 > Bad:
 ```cs
-// Returns a list of all results and organizes them alphabetically
-var names = new List<string>() { "John", "Tom", "Peter" };
-foreach (string name in names)
+using System.Web;
+
+/// <summary>
+/// Summary description for Class1
+/// </summary>
+public class Class1
 {
-    Console.WriteLine(name);
+	public Class1()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+        var names = new List<string>() { "John", "Tom", "Peter" };
+        foreach (string name in names)
+        {
+            Console.WriteLine(name);
+        }
+	}
 }
 ```
 
