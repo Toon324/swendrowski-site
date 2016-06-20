@@ -1,40 +1,41 @@
 @using FluentBootstrap
 
-<div class="background-row row grey darken-1 mask pattern-7">
-    <div class="container m-1">
-        @using (var row = Html.Bootstrap().GridRow().Begin())
+<div class="background-row row grey darken-1 mask pattern-7"/>
+
+<div class="container post-container">
+    @using (var row = Html.Bootstrap().GridRow().Begin())
+    {
+        using (row.GridColumn().Begin())
         {
-            using (row.GridColumn().Begin())
-            {
                 <!--Featured Image-->
-                <div class="view overlay hm-white-slight z-depth-2">
-                    @Html.Bootstrap().Placeholder(1170, 330)
-                    @*<img src="@Metadata["PromoImageUrl"]" class="img-fluid" alt="">*@
-                </div>
-            }
-            using (row.GridColumn().Begin())
-            {
-                <!--Post data-->
-                <div class="jumbotron card grey lighten-5">
-                    <div class="card-block">
-                        <h2 class="h2-responsive">@Metadata["Title"]</h2>
-                        <hr>
-                        <p class="text-muted">Cody Swendrowski - @Metadata["Published"]</p>
-
-                        <article class="blog-post flow-text">
-                            @Html.Raw(Metadata["Post"])
-                        </article>
-                    </div>
-
-                    <div class="card-action social-counters">
-                        <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
-
-                        <a type="button" class="btn-floating btn-large btn-gplus"><i class="fa fa-google-plus"></i></a>
-
-                        <a type="button" class="btn-floating btn-large btn-li"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            }
+            <div class="view overlay hm-white-slight z-depth-2">
+                @Html.Bootstrap().Placeholder(1170, 330)
+                @*<img src="@Metadata["PromoImageUrl"]" class="img-fluid" alt="">*@
+            </div>
         }
-    </div>
+        using (row.GridColumn().Begin())
+        {
+                <!--Post data-->
+            <div class="jumbotron card grey lighten-5">
+                <div class="card-block">
+                    <h2 class="h2-responsive center-on-small-only">@Metadata["Title"]</h2>
+                    <hr>
+                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - @Metadata["Published"]</h5>
+
+                    <article class="blog-post flow-text">
+                        @Html.Raw(Metadata["Post"])
+                    </article>
+                </div>
+
+                <div class="card-action social-counters">
+                    <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
+
+                    <a type="button" class="btn-floating btn-large btn-gplus"><i class="fa fa-google-plus"></i></a>
+
+                    <a type="button" class="btn-floating btn-large btn-li"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        }
+    }
 </div>
+
