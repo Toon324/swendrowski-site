@@ -14,12 +14,16 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <!-- Code Highlighting -->
+    <link rel="stylesheet" href="\Assets\css\default.css">
+    <link rel="stylesheet" href="\Assets\css\vs.css">
+
     <!-- Bootstrap -->
     <link href="\Assets\css\bootstrap.min.css" rel="stylesheet">
     <link href="\Assets\css\mdb.min.css" rel="stylesheet">
 
     <link href="\Assets\css\custom.css" rel="stylesheet">
-    
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +33,7 @@
     <![endif]-->
 </head>
 <body>
+    @Html.Partial("_NavBar.cshtml")
     @using (Html.Bootstrap().Container().SetFluid().Begin())
     {
         @RenderBody()
@@ -38,5 +43,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/Assets/js/bootstrap.min.js"></script>
     <script src="/Assets/js/mdb.min.js"></script>
+    <!-- Code Highlighting -->
+    <script src="/Assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
