@@ -12,6 +12,10 @@
     font-weight: normal;
 }
 
+pre code {
+    font-size: 16px;
+}
+
 @media only screen and (max-width: 768px) {
     .card-block {
         padding: 4%;
@@ -21,7 +25,6 @@
         padding-top: 7rem;
     }
 }
-
 
 /* Extends flow-text to parsed Markdown HTML '*/
 
@@ -100,59 +103,5 @@
 @media only screen and (min-width: 720px) {
     .flow-text > p {
         font-size: 1.488rem !important;
-    }
-}
-
-@media only screen and (min-width: 750px) {
-    .flow-text > p {
-        font-size: 1.512rem !important;
-    }
-}
-
-@media only screen and (min-width: 780px) {
-    .flow-text > p {
-        font-size: 1.536rem !important;
-    }
-}
-
-@media only screen and (min-width: 810px) {
-    .flow-text > p {
-        font-size: 1.56rem !important;
-    }
-}
-
-@media only screen and (min-width: 840px) {
-    .flow-text > p {
-        font-size: 1.584rem !important;
-    }
-}
-
-@media only screen and (min-width: 870px) {
-    .flow-text > p {
-        font-size: 1.608rem !important;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    .flow-text > p {
-        font-size: 1.632rem !important;
-    }
-}
-
-@media only screen and (min-width: 930px) {
-    .flow-text > p {
-        font-size: 1.656rem !important;
-    }
-}
-
-@media only screen and (min-width: 960px) {
-    .flow-text > p {
-        font-size: 1.68rem !important;
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    .flow-text > p {
-        font-size: 1.2rem !important;
     }
 }
