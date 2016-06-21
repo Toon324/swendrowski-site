@@ -21,7 +21,7 @@
                     <h2 class="h2-responsive center-on-small-only">@Metadata["Title"]</h2>
                     <hr>
                     <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - @Metadata["Published"]</h5>
-
+                    <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"></a>
                     <article class="blog-post flow-text">
                         @Html.Raw(Metadata["Post"])
                     </article>
@@ -44,7 +44,7 @@
                             this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
                         */
-                        (function() { // DON'T EDIT BELOW THIS LINE
+                        (function () { // DON'T EDIT BELOW THIS LINE
                             var d = document, s = d.createElement('script');
 
                             s.src = '//swendrowski.disqus.com/embed.js';
@@ -60,16 +60,45 @@
     }
 </div>
 
+@{
+    var modalOptions = "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600";
+}
+
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large grey">
-        <i class="large material-icons">bubble_chart</i>
+        <i class="large material-icons">share</i>
     </a>
-
     <ul>
-        <li><a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a></li>
-        <li><a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a></li>
-        <li><a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a></li>
-        <li><a class="btn-floating btn-large blue waves-effect waves-light"><i class="fa fa-get-pocket"> </i></a></li>
+        <li>
+            <a class="btn-floating btn-large gplus-bg waves-effect waves-light"
+               onclick="javascript: window.open('https://plus.google.com/share?url=' + window.location.href, '', '@modalOptions'); return false;">
+                <i class="fa fa-google-plus"> </i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating btn-large tw-bg waves-effect waves-light"
+               onclick="javascript: window.open('https://twitter.com/intent/tweet?via=cswendrowski&url=' + window.location.href, '', '@modalOptions'); return false;">
+                <i class="fa fa-twitter"> </i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating btn-large li-bg waves-effect waves-light"
+               onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href + '&summary=@Metadata["Title"]', '', '@modalOptions' ); return false;">
+                <i class="fa fa-linkedin"> </i>
+            </a>
+        </li>
     </ul>
 </div>
 
+<!-- Pocket -->
+<script type="text/javascript">
+    !function (d, i) {
+        if (!d.getElementById(i)) {
+            var j = d.createElement("script");
+            j.id = i;
+            j.src = "https://widgets.getpocket.com/v1/j/btn.js?v=1";
+            var w = d.getElementById(i);
+            d.body.appendChild(j);
+        }
+    }(document, "pocket-btn-js");
+</script>
