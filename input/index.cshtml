@@ -1,35 +1,39 @@
-<h1>Home</h1>
-<hr/>
-<p>Hi, this paragraph has a little bit about me - it's neat</p>
-<h2>Posts</h2>
+@using FluentBootstrap
 
-@{
-	var colors = new string[] {"red", "pink", "purple", "deep-purple", "indigo", "blue",
-     "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange",
-     "deep-orange", "brown", "grey", "blue-grey"};
-	var index = 0;
-}
-@while (index < colors.Count()) {
-foreach(var doc in Documents["Posts"].OrderBy(x => x["Title"]))
+@using (Html.Bootstrap().Container().Begin())
 {
-    if (index < colors.Count()) {
-	var baseColor = colors[index];
-	index++;
+    <h1>Home</h1>
+    <hr />
+    <p>Hi, this paragraph has a little bit about me - it's neat</p>
+    <h2>Posts</h2>
 
-        <div class="col-md-3 col-xs-6">
-            <div class="card @baseColor darken-1 hoverable">
-                <div class="@baseColor lighten-2 text-center">
-                    <small>@doc["Published"]</small>
+    using (var row = Html.Bootstrap().GridRow().Begin())
+    {
+        using (row.GridColumn().SetSm(4).Begin())
+        {
+            <text>
+                @Html.Partial("_Categories.cshtml")
+            </text>
+        }
+        using (row.GridColumn().SetSm(8).Begin())
+        {
+            foreach (var doc in Documents["Posts"].OrderBy(x => x["Title"]))
+            {
+                <div>
+                    <div class="card red darken-1 hoverable">
+                        <div class="red lighten-2 text-center">
+                            <small>@doc["Published"]</small>
+                        </div>
+                        <div class="card-content white-text">
+                            <span class="card-title">@doc["Title"]</span>
+                            <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
+                        </div>
+                        <div class="card-action red accent-4">
+                            <a class="elegant-color-text waves-effect" href="@doc["PostFile"]">Read More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content white-text">
-                    <span class="card-title">@doc["Title"]</span>
-                    <a class="btn-floating btn-large waves-effect waves-light @baseColor accent-2"><i class="material-icons">star</i></a>
-                </div>
-                <div class="card-action @baseColor accent-4">
-                    <a class="elegant-color-text waves-effect" href="@doc["PostFile"]">Read More</a>
-                </div>
-            </div>
-        </div>
+            }
+        }
     }
-}
 }
