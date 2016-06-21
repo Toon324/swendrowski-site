@@ -1,0 +1,33 @@
+<div class="container offset-top">
+
+    <h3>
+        Posts for
+        <span class="hide" data-category="sitecore">Sitecore</span>
+        <span class="hide" data-category="csharp">C#</span>
+        <span class="hide" data-category="general">General</span>
+    </h3>
+    @foreach (var doc in Documents["Posts"].OrderBy(x => x["Published"]))
+    {
+        <div>
+            <div class="card red darken-1 hoverable hide col-sm-6" data-category="@doc["Category"]">
+                <div class="red lighten-2 text-center">
+                    <small>@doc["Published"]</small>
+                </div>
+                <div class="card-content white-text">
+                    <span class="card-title">@doc["Title"]</span>
+                    <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
+                </div>
+                <div class="card-action red accent-4">
+                    <a class="elegant-color-text waves-effect" href="@doc["PostFile"]">Read More</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    var category = urlParams["category"];
+
+    $("div[data-category='" + category + "']").removeClass('hide');
+    $("span[data-category='" + category + "']").removeClass('hide');
+</script>
