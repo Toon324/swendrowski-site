@@ -108,52 +108,50 @@
 
 
 
-<div class="container-fluid">
-<div class="container offset-top">
-    <h1>Home</h1>
-    <hr/>
-    <p>Hi, this paragraph has a little bit about me - it's neat</p>
-    <h2>Lastest Posts</h2>
+<div class="container-fluid"><div class="container offset-top">
 
+    <h3>
+        Posts for
+        <span class="hide" data-category="sitecore">Sitecore</span>
+        <span class="hide" data-category="csharp">C#</span>
+        <span class="hide" data-category="general">General</span>
+    </h3>
+        <div>
+            <div class="card red darken-1 hoverable hide col-sm-6" data-category="csharp">
+                <div class="red lighten-2 text-center">
+                    <small>06-19-16</small>
+                </div>
+                <div class="card-content white-text">
+                    <span class="card-title">Method Sizing in C Sharp</span>
+                    <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
+                </div>
+                <div class="card-action red accent-4">
+                    <a class="elegant-color-text waves-effect" href="posts\method-sizing-in-c-sharp.html">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card red darken-1 hoverable hide col-sm-6" data-category="general">
+                <div class="red lighten-2 text-center">
+                    <small>5-14-16</small>
+                </div>
+                <div class="card-content white-text">
+                    <span class="card-title">Another Post</span>
+                    <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
+                </div>
+                <div class="card-action red accent-4">
+                    <a class="elegant-color-text waves-effect" href="posts\another-post.html">Read More</a>
+                </div>
+            </div>
+        </div>
+</div>
 
-<div class="row">
- <div class="col-sm-4">            <h4>Sitecore</h4>
-</div>
- <div class="col-sm-4">            <h4>C#</h4>
-                <div>
-                    <div class="card red darken-1 hoverable">
-                        <div class="red lighten-2 text-center">
-                            <small>06-19-16</small>
-                        </div>
-                        <div class="card-content white-text">
-                            <span class="card-title">Method Sizing in C Sharp</span>
-                            <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
-                        </div>
-                        <div class="card-action red accent-4">
-                            <a class="elegant-color-text waves-effect" href="posts\method-sizing-in-c-sharp.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-</div>
- <div class="col-sm-4">            <h4>General</h4>
-                <div>
-                    <div class="card red darken-1 hoverable">
-                        <div class="red lighten-2 text-center">
-                            <small>5-14-16</small>
-                            <small>Category - general</small>
-                        </div>
-                        <div class="card-content white-text">
-                            <span class="card-title">Another Post</span>
-                            <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
-                        </div>
-                        <div class="card-action red accent-4">
-                            <a class="elegant-color-text waves-effect" href="posts\another-post.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-</div>
-</div>
-</div>
+<script>
+    var category = urlParams["category"];
+
+    $("div[data-category='" + category + "']").removeClass('hide');
+    $("span[data-category='" + category + "']").removeClass('hide');
+</script>
 </div>
     <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
