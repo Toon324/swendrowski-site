@@ -1,7 +1,8 @@
-Published: 5-14-16
+Published: 05-14-16
 Title: Another Post
 PromoImageUrl: http://mdbootstrap.com/images/slides/slide%20(16).jpg
 Category: general
+Intro: This is a summary
 ---
 And here's another post.
 

@@ -2,6 +2,7 @@ Published: 06-19-16
 Title: Method Sizing in C Sharp
 PromoImageUrl: http://www.codehousegroup.com/~/media/images/blog/sitecore-logo.ashx?h=330&w=880
 Category: csharp
+Intro: This is a summary
 ---
 The intent of each method should be describable in one sentence without using the word "and". If a method has multiple steps before it returns, each of those steps should be pulled into a method. 
 

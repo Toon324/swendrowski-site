@@ -8,17 +8,29 @@
     </h3>
     @foreach (var doc in Documents["Posts"].OrderBy(x => x["Published"]))
     {
-        <div>
-            <div class="card red darken-1 hoverable hide col-sm-6" data-category="@doc["Category"]">
-                <div class="red lighten-2 text-center">
-                    <small>@doc["Published"]</small>
+        <div class="col-sm-6 hide" data-category="@doc["Category"]">
+            <div class="elegant-card z-depth-1 hoverable">
+                <!-- Image wrapper -->
+                <div class="card-up view overlay hm-white-slight">
+                    <h5 class="card-label"> <span class="label rgba-black-light">@doc["Category"].ToString().Replace("csharp","C#")</span></h5>
+                    <a href="@doc["PostFile"]"><img src="@doc["PromoImageUrl"]" class="img-responsive" alt=""></a>
+                    <div class="mask waves-effect waves-light"> </div>
                 </div>
-                <div class="card-content white-text">
-                    <span class="card-title">@doc["Title"]</span>
-                    <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
+                <!-- Button -->
+                <a class="btn-floating btn-large waves-effect waves-light stylish-color" href="@doc["PostFile"]"><i class="fa fa-chevron-right"></i></a>
+                <!-- Content -->
+                <div class="card-content grey lighten-5">
+                    <h5>@doc["Title"]</h5>
+                    <p>@doc["Intro"]</p>
                 </div>
-                <div class="card-action red accent-4">
-                    <a class="elegant-color-text waves-effect" href="@doc["PostFile"]">Read More</a>
+                <!-- Footer -->
+                <div class="card-footer">
+                    <ul class="list-inline">
+                        <li><i class="fa fa-clock-o"></i>@doc["Published"]</li>
+                        @*<li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>*@
+                    </ul>
                 </div>
             </div>
         </div>

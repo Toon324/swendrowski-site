@@ -16,6 +16,14 @@
     font-weight: normal;
 }
 
+.img-responsive {
+    width: 100%;
+}
+
+.elegant-card img{
+    height: 230px;
+}
+
 pre code {
     font-size: 16px;
 }

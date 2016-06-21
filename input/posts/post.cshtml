@@ -9,8 +9,8 @@
         {
                 <!--Featured Image-->
             <div class="view overlay hm-white-slight z-depth-2">
-                @Html.Bootstrap().Placeholder(1170, 330)
-                @*<img src="@Metadata["PromoImageUrl"]" class="img-fluid" alt="">*@
+                @*@Html.Bootstrap().Placeholder(1170, 330)*@
+                <img src="@Metadata["PromoImageUrl"]" class="img-responsive" alt="">
             </div>
         }
         using (row.GridColumn().Begin())
