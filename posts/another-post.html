@@ -1,42 +1,217 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <!-- Enforce HTTPS -->
+    <script type="text/javascript">
+        var host = "swendrowski.us";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Cody Swendrowski</title>
 
-    <!-- Bootstrap -->
-    <link href="Assets\css\bootstrap.min.css" rel="stylesheet">
-    <link href="Assets\css\mdb.min.css" rel="stylesheet">
+    <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Code Highlighting -->
+    <link rel="stylesheet" href="\Assets\css\default.css">
+    <link rel="stylesheet" href="\Assets\css\vs.css">
+
+    <!-- Bootstrap -->
+    <link href="\Assets\css\bootstrap.min.css" rel="stylesheet">
+    <link href="\Assets\css\mdb.min.css" rel="stylesheet">
+
+    <link href="\Assets\css\custom.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-      <div class="container-fluid">
-           <h1>Another Post</h1>
-<h2>2015-04-28</h2>
-<hr />
-<p>And here's another post.</p>
+</head>
+<body>
+    
+<!--Navbar-->
+
+<nav class="navbar elegant-color navbar-fixed-top z-depth-1" role="navigation">
+    <!--Content for large and medium screens-->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand waves-effect waves-light" href="#">Cody Swendrowski</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+    <a class="waves-effect waves-light" href="#">
+        Home<span class="sr-only">(current)</span>
+    </a>
+</li>
+<li class="dropdown">
+    <a class="dropdown-toggle waves-effect waves-light" type="button" id="dropdownMenu1"
+       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Blog Posts
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li class="waves-effect waves-light">
+            <a class="dropdown-item" href="#">Sitecore</a>
+        </li>
+        <li class="waves-effect waves-light">
+            <a class="dropdown-item" href="#">C#</a>
+        </li><li class="waves-effect waves-light">
+            <a class="dropdown-item" href="#">General</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a class="waves-effect waves-light" data-toggle="modal" data-target="#myModal">About Me</a>
+</li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--/.Navbar-->
+
+
+
+<div class="container-fluid">
+<div class="background-row row grey darken-1 mask pattern-7" />
+
+<div class="container post-container">
+
+<div class="row">
+ <div>                <!--Featured Image-->
+            <div class="view overlay hm-white-slight z-depth-2">
+                
+  <img src="http://placehold.it/1170x330">
+                
+            </div>
+
+ </div>
+ <div>                <!--Post data-->
+            <div class="jumbotron card grey lighten-5">
+                <div class="card-block">
+                    <h2 class="h2-responsive center-on-small-only">Another Post</h2>
+                    <hr>
+                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - 2015-04-28</h5>
+
+                    <article class="blog-post flow-text">
+                        <p>And here's another post.</p>
 <h1>Heading 1</h1>
 <p>This post has some great content!</p>
 <h2>Heading 2</h2>
 <p>And it's got subheadings!</p>
 
 
-      </div>
+                    </article>
+                </div>
+
+                <div class="card-action social-counters">
+                    <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
+
+                    <a type="button" class="btn-floating btn-large btn-gplus"><i class="fa fa-google-plus"></i></a>
+
+                    <a type="button" class="btn-floating btn-large btn-li"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+</div>
+ <div>            <div class="jumbotron card grey lighten-4">
+                <div class="card-block">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                         */
+                        /*
+                        var disqus_config = function () {
+                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+
+                            s.src = '//swendrowski.disqus.com/embed.js';
+
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+            </div>
+</div>
+</div></div>
+</div>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!--Author box-->
+        <div class="card-panel author-box hoverable">
+            <div class="row center-on-small-only">
+                <h5 class="text-center">About Me</h5>
+                <hr>
+                <!--Avatar-->
+                <div class="col-sm-3 ">
+                    <img src="http://brandflow.pl/wp-content/uploads/2015/03/michal.png" class="img-responsive">
+                </div>
+                <!--/.Avatar-->
+                <!--Content-->
+                <div class="col-sm-9">
+                    <h5 class="author-name">Cody Swendrowski</h5>
+
+                    <div class="personal-sm">
+                        <a class="icons-sm tw-ic" target="_blank" href="https://twitter.com/cswendrowski" rel="noopener noreferrer"><i class="fa fa-twitter"> </i></a>
+                        <a class="icons-sm li-ic" target="_blank" href="https://www.linkedin.com/in/cody-swendrowski-88828654" rel="noopener noreferrer"><i class=" fa fa-linkedin"> </i></a>
+                        <a class="icons-sm email-ic" target="_blank" href="mailto:cody@swendrowski.us" rel="noopener noreferrer"><i class="fa fa-envelope-o"> </i></a>
+                    </div>
+                    <br>
+                    <!--Description-->
+                    <p class="author-description">
+                        I write code, and sometimes it's good.
+                    </p>
+                    <!--/.Description-->
+                </div>
+                <!--Content-->
+            </div>
+        </div>
+        <!--/.Author box-->
+    </div>
+</div>
+
+
+    <footer class="page-footer elegant-color center-on-small-only">
+    <div class="footer-copyright text-center rgba-black-light">
+        <div class="container-fluid">
+            © 2016 Copyright: <a href="http://www.swendrowski.us"> swendrowski.us </a>
+        </div>
+    </div>
+</footer>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="Assets/js/jquery.min.js"></script>
+    <script src="/Assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="Assets/js/bootstrap.min.js"></script>
-    <script src="Assets/js/mdb.min.js"></script>
-  </body>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/mdb.min.js"></script>
+
+    <!-- Code Highlighting -->
+    <script src="/Assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
 </html>

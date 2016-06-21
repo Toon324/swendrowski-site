@@ -91,54 +91,109 @@
 
 
 <div class="container-fluid">
+<div class="background-row row grey darken-1 mask pattern-7" />
 
-<div class="container">    <h1>Home</h1>
-    <hr />
-    <p>Hi, this paragraph has a little bit about me - it's neat</p>
-    <h2>Posts</h2>
+<div class="container post-container">
 
- <div class="row">
-  <div class="col-sm-4">            
-                <div class="blog-categories sticky">
-    <ul>
-        <li>Test</li>
-        <li>Test</li>
-    </ul>
-</div>
+<div class="row">
+ <div>                <!--Featured Image-->
+            <div class="view overlay hm-white-slight z-depth-2">
+                
+  <img src="http://placehold.it/1170x330">
+                
+            </div>
 
-            
-</div>
-  <div class="col-sm-8">                <div>
-                    <div class="card red darken-1 hoverable">
-                        <div class="red lighten-2 text-center">
-                            <small>2015-04-28</small>
-                        </div>
-                        <div class="card-content white-text">
-                            <span class="card-title">Another Post</span>
-                            <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
-                        </div>
-                        <div class="card-action red accent-4">
-                            <a class="elegant-color-text waves-effect" href="posts\another-post.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card red darken-1 hoverable">
-                        <div class="red lighten-2 text-center">
-                            <small>6-19-16</small>
-                        </div>
-                        <div class="card-content white-text">
-                            <span class="card-title">Method Sizing in C Sharp</span>
-                            <a class="btn-floating btn-large waves-effect waves-light red accent-2"><i class="material-icons">star</i></a>
-                        </div>
-                        <div class="card-action red accent-4">
-                            <a class="elegant-color-text waves-effect" href="posts\method-sizing-in-c-sharp.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-</div>
  </div>
+ <div>                <!--Post data-->
+            <div class="jumbotron card grey lighten-5">
+                <div class="card-block">
+                    <h2 class="h2-responsive center-on-small-only">Method Sizing in C Sharp</h2>
+                    <hr>
+                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - 6-19-16</h5>
+
+                    <article class="blog-post flow-text">
+                        <p>The intent of each method should be describable in one sentence without using the word &quot;and&quot;. If a method has multiple steps before it returns, each of those steps should be pulled into a method.</p>
+<p>As a general rule-of-thumb, methods should be no longer than 15 lines long.</p>
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">using System.Web;
+
+/// &lt;summary&gt;
+/// Summary description for Class1
+/// &lt;/summary&gt;
+public class Class1
+{
+	public Class1()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+        var names = new List&lt;string&gt;() { &quot;John&quot;, &quot;Tom&quot;, &quot;Peter&quot; };
+        foreach (string name in names)
+        {
+            Console.WriteLine(name);
+        }
+	}
+}
+</code></pre>
+<blockquote>
+<p>Good:</p>
+</blockquote>
+<pre><code class="language-cs">// Returns a list of all results
+GetResults() 
+{
+  // Return Results
+}
+// Organizes a list of results alphabetically
+OrganizeAlphabetically()
+{
+  // Organize List
+}
+</code></pre>
+
+
+                    </article>
+                </div>
+
+                <div class="card-action social-counters">
+                    <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
+
+                    <a type="button" class="btn-floating btn-large btn-gplus"><i class="fa fa-google-plus"></i></a>
+
+                    <a type="button" class="btn-floating btn-large btn-li"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+</div>
+ <div>            <div class="jumbotron card grey lighten-4">
+                <div class="card-block">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                         */
+                        /*
+                        var disqus_config = function () {
+                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+
+                            s.src = '//swendrowski.disqus.com/embed.js';
+
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+            </div>
+</div>
 </div></div>
+</div>
     <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
         <!--Author box-->

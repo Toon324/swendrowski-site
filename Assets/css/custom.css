@@ -1,0 +1,107 @@
+﻿.background-row {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+.post-container {
+    padding-top: 10rem;
+}
+
+.blog-post p {
+    font-weight: normal;
+}
+
+pre code {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-block {
+        padding: 4%;
+    }
+
+    .post-container {
+        padding-top: 7rem;
+    }
+}
+
+/* Extends flow-text to parsed Markdown HTML '*/
+
+@media only screen and (min-width: 360px) {
+    .flow-text > p {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    .flow-text > p {
+        font-size: 1.224rem !important;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .flow-text > p {
+        font-size: 1.248rem !important;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .flow-text > p {
+        font-size: 1.272rem !important;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .flow-text > p {
+        font-size: 1.296rem !important;
+    }
+}
+
+@media only screen and (min-width: 510px) {
+    .flow-text > p {
+        font-size: 1.32rem !important;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .flow-text > p {
+        font-size: 1.344rem !important;
+    }
+}
+
+@media only screen and (min-width: 570px) {
+    .flow-text > p {
+        font-size: 1.368rem !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .flow-text > p {
+        font-size: 1.392rem !important;
+    }
+}
+
+@media only screen and (min-width: 630px) {
+    .flow-text > p {
+        font-size: 1.416rem !important;
+    }
+}
+
+@media only screen and (min-width: 660px) {
+    .flow-text > p {
+        font-size: 1.44rem !important;
+    }
+}
+
+@media only screen and (min-width: 690px) {
+    .flow-text > p {
+        font-size: 1.464rem !important;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .flow-text > p {
+        font-size: 1.488rem !important;
+    }
+}
