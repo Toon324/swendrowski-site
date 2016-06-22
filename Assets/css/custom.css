@@ -20,12 +20,20 @@
     width: 100%;
 }
 
-.elegant-card img{
+.elegant-card img {
     height: 230px;
 }
 
 footer.page-footer a {
     font-size: 12px;
+}
+
+footer.page-footer .footer-copyright {
+    line-height: 0;
+}
+
+.footer-copyright .small {
+    font-size: 80%;
 }
 
 pre code {
@@ -44,11 +52,19 @@ pre code {
     pre code {
         font-size: 14px;
     }
+
+    .footer-copyright .small {
+        font-size: 65%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     pre code {
         font-size: 12px;
+    }
+
+    .footer-copyright .small {
+        font-size: 50%;
     }
 }
 
