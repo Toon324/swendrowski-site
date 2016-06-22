@@ -36,6 +36,22 @@ pre code {
     .post-container {
         padding-top: 7rem;
     }
+
+    pre code {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    pre code {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    pre code {
+        font-size: 10px;
+    }
 }
 
 /* Extends flow-text to parsed Markdown HTML '*/
