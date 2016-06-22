@@ -12,9 +12,11 @@
             <div class="elegant-card z-depth-1 hoverable">
                 <!-- Image wrapper -->
                 <div class="card-up view overlay hm-white-slight">
-                    <h5 class="card-label"> <span class="label rgba-black-light">@doc["Category"].ToString().Replace("csharp","C#")</span></h5>
-                    <a href="@doc["PostFile"]"><img src="@doc["PromoImageUrl"]" class="img-responsive" alt=""></a>
-                    <div class="mask waves-effect waves-light"> </div>
+                    <h5 class="card-label"> <span class="label rgba-black-light">@doc["Category"].ToString().Replace("csharp", "C#")</span></h5>
+                    <a href="@doc["PostFile"]">
+                        <img src="@doc["PromoImageUrl"]" class="img-responsive" alt="">
+                        <div class="mask waves-effect waves-light"> </div>
+                    </a>
                 </div>
                 <!-- Button -->
                 <a class="btn-floating btn-large waves-effect waves-light stylish-color" href="@doc["PostFile"]"><i class="fa fa-chevron-right"></i></a>
@@ -27,9 +29,7 @@
                 <div class="card-footer">
                     <ul class="list-inline">
                         <li><i class="fa fa-clock-o"></i>@doc["Published"]</li>
-                        @*<li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
-                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
-                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>*@
+                        <li><i class="fa fa-comments-o"></i><a href="@doc["PostFile"]#disqus_thread"></a></li>
                     </ul>
                 </div>
             </div>
