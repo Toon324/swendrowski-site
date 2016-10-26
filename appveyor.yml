@@ -13,7 +13,7 @@ install:
   - mkdir ..\Output
   # Fetch the latest version of Wyam 
   #- "curl -s https://github.com/Wyamio/Wyam/releases/tag/v0.12.4-beta -o ..\\Wyam\\wyamversion.txt"
-  - set /P WYAMVERSION=< "v0.12.4-beta"
+  - set /P WYAMVERSION = "v0.12.4-beta"
   - echo %WYAMVERSION%
   # Get and unzip the latest version of Wyam
   - ps: Start-FileDownload "https://github.com/Wyamio/Wyam/releases/download/$env:WYAMVERSION/Wyam-$env:WYAMVERSION.zip" -FileName "..\Wyam\Wyam.zip"
