@@ -8,7 +8,7 @@
 
     <div class="divider-new">Latest Posts</div>
 
-    @foreach (var doc in Documents["Posts"].OrderBy(x => x["Published"]).Take(4))
+    @foreach (var doc in Documents["Posts"].OrderByDescending(x => x["Published"]).Take(4))
     {
         <div class="col-sm-6" data-category="@doc["Category"]">
             <div class="elegant-card z-depth-1 hoverable">
