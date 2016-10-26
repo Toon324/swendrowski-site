@@ -1,6 +1,6 @@
 Published: 10-26-16
 Title: Integrating with Netsuite using C#
-PromoImageUrl: http://mdbootstrap.com/images/slides/slide%20(16).jpg
+PromoImageUrl: http://www.allunna.com/hs-fs/hub/334319/file-599227512-jpg/Allunnas_Pages_Pictures/Netsuite.jpg
 Category: csharp
 Intro: A detailed guide to how to make heads or tails of the Netsuite SOAP API in C#
 ---
