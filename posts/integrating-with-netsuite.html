@@ -155,7 +155,7 @@
 <p>If all of the data you need is in any of these lists, I encourage you to try out Cloud Elements and only fall back to a native implementation if needed.</p>
 <h2>Netsuite C# Integration - Where do I start?</h2>
 <p>The best resource you can reference for integrating is the example C# CLI application that Netsuite provides <a href="http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml">here</a>. Download the CRM .Net example and take a look - examples of most of what you would want to do are littered throughout the various methods (although poorly explained), and there are a few methods you will want to borrow.</p>
-<p>The first thing you will need to do is reference the Netsuite SOAP service so that C# classes can be generated and the API can be consumed. This is done by adding a Web or Service reference <a href="http://stackoverflow.com/a/2158270">more on that here</a>.</p>
+<p>The first thing you will need to do is reference the Netsuite SOAP service so that C# classes can be generated and the API can be consumed. This is done by adding a Web or Service reference (<a href="http://stackoverflow.com/a/2158270">more on that here</a>).</p>
 <p>The URL you need to consume is <strong>https://webservices.netsuite.com/wsdl/v2016_1_0/netsuite.wsdl</strong></p>
 <p>As seen in the .Net example, you will need a constuctor similar to the following:</p>
 <pre><code>public NetsuiteService()
@@ -293,14 +293,13 @@ public static class ServiceExtensions
 <pre><code>public IEnumerable&lt;TimeBill&gt; GetAllTime()
 {
 	// Every search requires a valid session
-	Login();
+    Login();
 
     var search = new TimeBillSearch();
 
     return Get&lt;TimeBill&gt;(search);
 }
 </code></pre>
-<p><img src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.jillstanek.com%2Fwp%2Fwp-content%2Fuploads%2F2014%2F08%2FThat-Was-Easy-Button.png" alt="" /></p>
 <p>This will return a massive object with very few fields actually filled out, but you'll have access to the raw data you want via the fields <code>internalId</code>, <code>tranDate</code> (Date Logged), <code>hours.TimeSpan</code> (hours logged), and <code>isBillable</code>.</p>
 <h3>SearchBasic</h3>
 <p>Returning all results is slow, so what if we want to restrict the results to just time in the last month that is labled as &quot;Actual Time&quot;?</p>
