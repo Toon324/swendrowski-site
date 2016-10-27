@@ -46,7 +46,7 @@ If all of the data you need is in any of these lists, I encourage you to try out
 
 The best resource you can reference for integrating is the example C# CLI application that Netsuite provides [here](http://www.netsuite.com/portal/developers/resources/suitetalk-sample-applications.shtml). Download the CRM .Net example and take a look - examples of most of what you would want to do are littered throughout the various methods (although poorly explained), and there are a few methods you will want to borrow.
 
-The first thing you will need to do is reference the Netsuite SOAP service so that C# classes can be generated and the API can be consumed. This is done by adding a Web or Service reference [more on that here](http://stackoverflow.com/a/2158270).
+The first thing you will need to do is reference the Netsuite SOAP service so that C# classes can be generated and the API can be consumed. This is done by adding a Web or Service reference ([more on that here](http://stackoverflow.com/a/2158270)).
 
 The URL you need to consume is **https://webservices.netsuite.com/wsdl/v2016_1_0/netsuite.wsdl**
 
@@ -210,15 +210,13 @@ For a basic search where you want to get all results, search is fairly easy to w
 public IEnumerable<TimeBill> GetAllTime()
 {
 	// Every search requires a valid session
-	Login();
+    Login();
 
     var search = new TimeBillSearch();
 
     return Get<TimeBill>(search);
 }
 ```
-
-![](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.jillstanek.com%2Fwp%2Fwp-content%2Fuploads%2F2014%2F08%2FThat-Was-Easy-Button.png)
 
 This will return a massive object with very few fields actually filled out, but you'll have access to the raw data you want via the fields `internalId`, `tranDate` (Date Logged), `hours.TimeSpan` (hours logged), and `isBillable`.
 
