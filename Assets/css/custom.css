@@ -40,6 +40,10 @@ pre code {
     font-size: 16px;
 }
 
+.card-content {
+	min-height: 175px;
+}
+
 @media only screen and (max-width: 768px) {
     .card-block {
         padding: 4%;
@@ -139,17 +143,5 @@ pre code {
 @media only screen and (min-width: 660px) {
     .flow-text > p {
         font-size: 1.44rem !important;
-    }
-}
-
-@media only screen and (min-width: 690px) {
-    .flow-text > p {
-        font-size: 1.464rem !important;
-    }
-}
-
-@media only screen and (min-width: 720px) {
-    .flow-text > p {
-        font-size: 1.488rem !important;
     }
 }
