@@ -1,4 +1,4 @@
-Published: 06-06-16
+Published: 2016-06-06
 Title: A retrospective from 2 years of building Sites
 PromoImageUrl: http://mdbootstrap.com/images/slides/slide%20(16).jpg
 Category: general
@@ -20,7 +20,7 @@ My editor of choice was [Codio](), and after a little work I figured out how to 
 
 The hard work payed off and helped me land an internship at a Web Development Agency where I very quickly learned that I had only taken a small step into the world of Web Development.
 
-<img src="http://puu.sh/usI4e/059a6804a1.png" style="width: 600px;" />
+<img src="http://puu.sh/usI4e/059a6804a1.png" style="width: 600px;" /><br/>
 *The original site*
 
 - - -
