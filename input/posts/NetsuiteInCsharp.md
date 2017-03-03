@@ -1,4 +1,4 @@
-Published: 2016-10-26
+Published: 10/26/2016
 Title: Integrating with Netsuite
 PromoImageUrl: http://www.allunna.com/hs-fs/hub/334319/file-599227512-jpg/Allunnas_Pages_Pictures/Netsuite.jpg
 Category: csharp

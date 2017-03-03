@@ -1,4 +1,4 @@
-Published: 2016-06-06
+Published: 06/06/2016
 Title: A retrospective from 2 years of building Sites
 PromoImageUrl: http://mdbootstrap.com/images/slides/slide%20(16).jpg
 Category: general
