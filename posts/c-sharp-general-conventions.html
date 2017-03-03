@@ -80,7 +80,7 @@
     </a>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li class="waves-effect waves-light">
-            <a class="dropdown-item" href="/posts.html?category=sitecore">Sitecore</a>
+            <a class="dropdown-item" href="/posts.html?category=salesforce">Salesforce</a>
         </li>
         <li class="waves-effect waves-light">
             <a class="dropdown-item" href="/posts.html?category=csharp">C#</a>
@@ -112,22 +112,164 @@
  <div>            <!--Featured Image-->
             <div class="view overlay hm-white-slight z-depth-2">
                 
-                <img src="http://mdbootstrap.com/images/slides/slide%20(16).jpg" class="img-responsive" alt="">
+                <img src="http://www.hindscc.edu/Assets/images/careertech-hinds-computer-programmer-code.jpg" class="img-responsive" alt="">
             </div>
 </div>
  <div>            <!--Post data-->
             <div class="jumbotron card grey lighten-5">
                 <div class="card-block">
-                    <h2 class="h2-responsive center-on-small-only">Another Post</h2>
+                    <h2 class="h2-responsive center-on-small-only">C Sharp general Conventions</h2>
                     <hr>
-                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - 05-14-16</h5>
+                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - 06-19-16</h5>
                     <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"></a>
                     <article class="blog-post flow-text">
-                        <p>And here's another post.</p>
-<h1>Heading 1</h1>
-<p>This post has some great content!</p>
-<h2>Heading 2</h2>
-<p>And it's got subheadings!</p>
+                        <p>I love to mentor people looking to learn a bit of programming. Whenever I work with a new person, it doesn't take them long to ask &quot;Why does your code look so different than mine? Why does mine break and yours doesn't? Aren't they the same?&quot;</p>
+<p>The biggest difference I've noticed is just general formatting issues - large methods, poor formatting, and unhelpful comments lead to simple bugs that could have been avoided just with a little extra effort. In an effort to help combat that, I've decided to pull out some of the guidelines I wrote for a large Software project and make them easy to consume in one place. Without further ado, here they are!</p>
+<h2>Method Sizing</h2>
+<p>The intent of each method should be describable in one sentence without using the word &quot;and&quot;. If a method has multiple steps before it returns, each of those steps should be pulled into a method.</p>
+<p>As a general rule-of-thumb, methods should be no longer than 15 lines long.</p>
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">// Returns a list of all results and organizes them alphabetically
+GetOrganizedResults()
+{
+  // Get Results
+  // Organize List
+  // Return
+}
+</code></pre>
+<blockquote>
+<p>Good:</p>
+</blockquote>
+<pre><code class="language-cs">// Returns a list of all results
+GetResults() 
+{
+  // Return Results
+}
+// Organizes a list of results alphabetically
+OrganizeAlphabetically()
+{
+  // Organize List
+}
+</code></pre>
+<h2>Formatting</h2>
+<p><strong>DO:</strong> Try to use one class per file; Consider nested classes carefully.</p>
+<br>
+**DO:** Declare each variable independently, not in the same statement.
+> Good:
+```cs
+var magicNumber = 42;
+var counter = 1;
+var minimum = 100;
+```
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">var magicNumber = 42, counter = 1, minumum = 100;
+</code></pre>
+<br>
+**DO:** Always use curly braces for conditional statements.
+> Good:
+```cs
+if (theAnswer == 42)
+{
+	DoSomething();
+}
+else
+{
+	DoSomethingElse();
+}
+```
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">if (theAnswer == 42)
+	DoSomething();
+else
+	DoSomethingElse();
+</code></pre>
+<p><strong>DO:</strong> Use C#'s overloaded <code>==</code> operators for string comparisons instead of <code>string.Equals()</code></p>
+<blockquote>
+<p>Good:</p>
+</blockquote>
+<pre><code class="language-cs">if (message == &quot;Hello&quot;)
+{
+	DoSomething();
+}
+</code></pre>
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">if (message.Equals(&quot;Hello&quot;))
+{
+	DoSomething();
+}
+</code></pre>
+<p><strong>DO:</strong> Keep basic Get / Set Properties on one line</p>
+<blockquote>
+<p>Good:</p>
+<pre><code class="language-cs">public String Name { get; set; }
+</code></pre>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">public String Name
+{
+	get;
+	set;
+}
+</code></pre>
+<br>
+**DO:** Favor Method Properties over Getter and Setter methods for basic values
+> Good:
+```cs
+public String Name { get; set; }
+```
+<blockquote>
+<p>Good:</p>
+</blockquote>
+<pre><code class="language-cs">public int Total
+{
+	get { return 5 + 5; }
+}
+</code></pre>
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">private _name = string.Empty;
+public string GetName()
+{
+	return _name;
+}
+public void SetName(string toSet)
+{
+	_name = toSet;
+}
+</code></pre>
+<h2>Commenting</h2>
+<p><strong>DON'T:</strong> Leave code blocks commented out if they are old / unused. The Git repository maintains a record of the old version of the file.</p>
+<p><strong>DO:</strong> Strive to write self-documenting code that is human friendly and readable on its own.</p>
+<p><strong>DO:</strong> Use comments to explain the logic flow of complicated algorithms or to document external business rules.</p>
+<p><strong>Do:</strong> Use comments to explain the WHY not the WHAT.</p>
+<p><strong>DO:</strong> Use the Summary <code>///</code> commenting system for methods accessible in other classes.</p>
+<p><strong>DON'T:</strong> Write unnecessary or redundant comments.</p>
+<blockquote>
+<p>Bad:</p>
+</blockquote>
+<pre><code class="language-cs">// This is the maximum number of words
+private const var MaxiumumWords = 500;
+</code></pre>
+<blockquote>
+<p>Good:</p>
+</blockquote>
+<pre><code class="language-cs">// The external system will only accept blog posts under 500 words
+private const var MaxiumumWords = 500;
+</code></pre>
+<p><strong>DO:</strong> Use comments for task list keyword filtering.</p>
+<pre><code class="language-cs">// TODO: Some task that must be done, such as fully implementing a method
+// SHOULDDO: Some task that should be done, such as refactoring a method
+// HACK: Indicates code that is a workaround and should possibly be reapproached in the future.
+</code></pre>
 
 
                     </article>
@@ -141,7 +283,7 @@
 
                         var disqus_config = function () {
                             this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-                            this.page.identifier = 'Another Post'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            this.page.identifier = 'C Sharp general Conventions'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
 
                         (function () { // DON'T EDIT BELOW THIS LINE
@@ -180,7 +322,7 @@
         </li>
         <li>
             <a class="btn-floating btn-large li-bg waves-effect waves-light"
-               onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href + '&summary=Another Post', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600' ); return false;">
+               onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href + '&summary=C Sharp general Conventions', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600' ); return false;">
                 <i class="fa fa-linkedin"> </i>
             </a>
         </li>
@@ -231,14 +373,16 @@
 
                     <div class="personal-sm">
                         <a class="icons-sm gh-ic" target="_blank" href="https://github.com/cswendrowski" rel="noopener noreferrer"><i class="fa fa-github"> </i></a>
-                        <a class="icons-sm tw-ic" target="_blank" href="https://twitter.com/cswendrowski" rel="noopener noreferrer"><i class="fa fa-twitter"> </i></a>
                         <a class="icons-sm li-ic" target="_blank" href="https://www.linkedin.com/in/cody-swendrowski-88828654" rel="noopener noreferrer"><i class=" fa fa-linkedin"> </i></a>
                         <a class="icons-sm email-ic" target="_blank" href="mailto:cody@swendrowski.us" rel="noopener noreferrer"><i class="fa fa-envelope-o"> </i></a>
                     </div>
                     <br>
                     <!--Description-->
                     <p class="author-description">
-                        I write code, and sometimes it's good.
+                        I love writing code and making cool things. <br/>
+                        Neural networks, genetic programming, and natural language processing are all active interests of mine. Occassionally I do VR programming as well. <br/>
+                        <br/>
+                        MSCD certified, Sitecore certified, and soon to be Salesforce certified.
                     </p>
                     <!--/.Description-->
                 </div>

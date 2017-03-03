@@ -8,6 +8,11 @@
     padding-top: 10rem;
 }
 
+.post-container > .row {
+    width: 90%;
+    margin-left: 5%;
+}
+
 .offset-top {
     margin-top: 6rem;
 }
