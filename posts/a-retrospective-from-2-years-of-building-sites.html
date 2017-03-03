@@ -112,164 +112,47 @@
  <div>            <!--Featured Image-->
             <div class="view overlay hm-white-slight z-depth-2">
                 
-                <img src="http://www.hindscc.edu/Assets/images/careertech-hinds-computer-programmer-code.jpg" class="img-responsive" alt="">
+                <img src="http://mdbootstrap.com/images/slides/slide%20(16).jpg" class="img-responsive" alt="">
             </div>
 </div>
  <div>            <!--Post data-->
             <div class="jumbotron card grey lighten-5">
                 <div class="card-block">
-                    <h2 class="h2-responsive center-on-small-only">C Sharp general Conventions</h2>
+                    <h2 class="h2-responsive center-on-small-only">A retrospective from 2 years of building Sites</h2>
                     <hr>
-                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - 03-01-17</h5>
+                    <h5 class="h5-responsive text-muted center-on-small-only">Cody Swendrowski - 06-06-16</h5>
                     <a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"></a>
                     <article class="blog-post flow-text">
-                        <p>I love to mentor people looking to learn a bit of programming. Whenever I work with a new person, it doesn't take them long to ask &quot;Why does your code look so different than mine? Why does mine break and yours doesn't? Aren't they the same?&quot;</p>
-<p>The biggest difference I've noticed is just general formatting issues - large methods, poor formatting, and unhelpful comments lead to simple bugs that could have been avoided just with a little extra effort. In an effort to help combat that, I've decided to pull out some of the guidelines I wrote for a large Software project and make them easy to consume in one place. Without further ado, here they are!</p>
-<h2>Method Sizing</h2>
-<p>The intent of each method should be describable in one sentence without using the word &quot;and&quot;. If a method has multiple steps before it returns, each of those steps should be pulled into a method.</p>
-<p>As a general rule-of-thumb, methods should be no longer than 15 lines long.</p>
+                        <p>Just over two years ago, I built swendrowski.us for the first time. Although I had dabbled in HTML before, this was a project that I wanted to actually show people with pride, so I spent a few weeks learning the ropes to make something.</p>
+<p>I had been working with Java as my language-of-choice since I was 14, so the technical aspects of a site were easy to learn, but the design aspects eluded me. All I had ever made in my life were command line applications, 2D game engines that used rectangles to represent things, and all sorts of eyesore monstrosities using Java Swing GUI.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Gui-widgets.png/300px-Gui-widgets.png" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Gui-widgets.png/300px-Gui-widgets.png" />
+<em>I think we should make this UI popular again, it's &quot;retro&quot;</em></p>
+<p>I read some blogs, watched some videos, and played with some prototypes on my machine. I was amazed by how much you could make with just a little HTML and a framework.</p>
 <blockquote>
-<p>Bad:</p>
+<p><strong>Wow,</strong> I thought to myself. <strong>This Bootstrap stuff is pretty cool.</strong></p>
 </blockquote>
-<pre><code class="language-cs">// Returns a list of all results and organizes them alphabetically
-GetOrganizedResults()
-{
-  // Get Results
-  // Organize List
-  // Return
-}
-</code></pre>
+<p>My editor of choice was <a href="">Codio</a>, and after a little work I figured out how to set up the editor to publish straight to my hosted server. In just a few days I had went from cobbling together HTML and manually uploading them to a process where I could edit anywhere and easily update my site. I felt like I was living in the future!</p>
+<p>The hard work payed off and helped me land an internship at a Web Development Agency where I very quickly learned that I had only taken a small step into the world of Web Development.</p>
+<p><img src="http://puu.sh/usI4e/059a6804a1.png" alt="http://puu.sh/usI4e/059a6804a1.png" /> <em>The original site</em></p>
+<hr />
+<p>I've learned a lot since then. Here are the 5 things I would share with myself 2 years ago, given the chance.</p>
+<ol>
+<li><strong>Unit tests are good, in moderation.</strong> When I first started, Unit Tests seemed like a huge waste of time - why would I write code to prove that my working code was, in fact, working? I now know that Unit Tests help to ensure your code stands the test of time, but due to time constraints, they should be carefully designed to test a lot of things. 100% coverage is simply impractical on many projects.</li>
+<li><strong>Write your code as if everything is going to try and break it.</strong> Even API's from companies like Google and Facebook can break, so <em>null check, null check, and null check some more</em>.</li>
+<li><strong>Clean up and Document now, not later.</strong> It is easy to fall into the idea of &quot;this code is ugly or pooerly documented, but I'll clean it up later&quot;. If you don't do it before you push up your code, chances are it won't happen. At the least, put a <code>TODO:</code> comment for clean up or documentation, so other developers know it needs to be dome.</li>
+<li><strong>Write methods that are small and reusable.</strong> The more experience I get, the smaller my methods seem to get. Having a collection of small methods that each do one thing well is far more maintainable than a giant method that does the same thing all at once.</li>
+<li><strong>Don't be afraid to talk to people and ask questions.</strong> It is easy to get lost in the code and just keep trying new things, especially when we are stuck on something, As a group, we seem to have trouble admitting when we are stuck instead of asking for help. Ask a team mate for their thoughts, or pose a question online, or just go find a friend who you can explain your problem to. If what you're doing seems incredibly hard, there's probably a different way, so find it!</li>
+</ol>
+<hr />
+<p>Now it is twoyears later and I have replaced my old site with this hand-built blog. Compared to the first site, the description of how this site is works sounds like a wizard spouting made-up magical words:</p>
 <blockquote>
-<p>Good:</p>
+<p>&quot;The site uses a Fluently Configured engine written in C# that is curently setup to consume Markdown documents and dynamically insert them in Razor partial files, where Metadata is then used to organize and display them styled using Google's Material Design. Content is easy to update, just push up a commit on an orphaned branch and Appveyor will run the Generator code and push the updated site to Github Pages for hosting!&quot;</p>
 </blockquote>
-<pre><code class="language-cs">// Returns a list of all results
-GetResults() 
-{
-  // Return Results
-}
-// Organizes a list of results alphabetically
-OrganizeAlphabetically()
-{
-  // Organize List
-}
-</code></pre>
-<h2>Formatting</h2>
-<p><strong>DO:</strong> Try to use one class per file; Consider nested classes carefully.</p>
-<br>
-**DO:** Declare each variable independently, not in the same statement.
-> Good:
-```cs
-var magicNumber = 42;
-var counter = 1;
-var minimum = 100;
-```
-<blockquote>
-<p>Bad:</p>
-</blockquote>
-<pre><code class="language-cs">var magicNumber = 42, counter = 1, minumum = 100;
-</code></pre>
-<br>
-**DO:** Always use curly braces for conditional statements.
-> Good:
-```cs
-if (theAnswer == 42)
-{
-	DoSomething();
-}
-else
-{
-	DoSomethingElse();
-}
-```
-<blockquote>
-<p>Bad:</p>
-</blockquote>
-<pre><code class="language-cs">if (theAnswer == 42)
-	DoSomething();
-else
-	DoSomethingElse();
-</code></pre>
-<p><strong>DO:</strong> Use C#'s overloaded <code>==</code> operators for string comparisons instead of <code>string.Equals()</code></p>
-<blockquote>
-<p>Good:</p>
-</blockquote>
-<pre><code class="language-cs">if (message == &quot;Hello&quot;)
-{
-	DoSomething();
-}
-</code></pre>
-<blockquote>
-<p>Bad:</p>
-</blockquote>
-<pre><code class="language-cs">if (message.Equals(&quot;Hello&quot;))
-{
-	DoSomething();
-}
-</code></pre>
-<p><strong>DO:</strong> Keep basic Get / Set Properties on one line</p>
-<blockquote>
-<p>Good:</p>
-<pre><code class="language-cs">public String Name { get; set; }
-</code></pre>
-<p>Bad:</p>
-</blockquote>
-<pre><code class="language-cs">public String Name
-{
-	get;
-	set;
-}
-</code></pre>
-<br>
-**DO:** Favor Method Properties over Getter and Setter methods for basic values
-> Good:
-```cs
-public String Name { get; set; }
-```
-<blockquote>
-<p>Good:</p>
-</blockquote>
-<pre><code class="language-cs">public int Total
-{
-	get { return 5 + 5; }
-}
-</code></pre>
-<blockquote>
-<p>Bad:</p>
-</blockquote>
-<pre><code class="language-cs">private _name = string.Empty;
-public string GetName()
-{
-	return _name;
-}
-public void SetName(string toSet)
-{
-	_name = toSet;
-}
-</code></pre>
-<h2>Commenting</h2>
-<p><strong>DON'T:</strong> Leave code blocks commented out if they are old / unused. The Git repository maintains a record of the old version of the file.</p>
-<p><strong>DO:</strong> Strive to write self-documenting code that is human friendly and readable on its own.</p>
-<p><strong>DO:</strong> Use comments to explain the logic flow of complicated algorithms or to document external business rules.</p>
-<p><strong>Do:</strong> Use comments to explain the WHY not the WHAT.</p>
-<p><strong>DO:</strong> Use the Summary <code>///</code> commenting system for methods accessible in other classes.</p>
-<p><strong>DON'T:</strong> Write unnecessary or redundant comments.</p>
-<blockquote>
-<p>Bad:</p>
-</blockquote>
-<pre><code class="language-cs">// This is the maximum number of words
-private const var MaxiumumWords = 500;
-</code></pre>
-<blockquote>
-<p>Good:</p>
-</blockquote>
-<pre><code class="language-cs">// The external system will only accept blog posts under 500 words
-private const var MaxiumumWords = 500;
-</code></pre>
-<p><strong>DO:</strong> Use comments for task list keyword filtering.</p>
-<pre><code class="language-cs">// TODO: Some task that must be done, such as fully implementing a method
-// SHOULDDO: Some task that should be done, such as refactoring a method
-// HACK: Indicates code that is a workaround and should possibly be reapproached in the future.
-</code></pre>
+<p><em>(Don't worry, if you want to expand your spellbook, I will be writing up an in-depth post on how it all works later!)</em></p>
+<p>To the casual observer, I probably seem to now be a master of my craft, one who has absorbed the knowledge of my mentors and is ready to join their ranks. Yet I know I have still only just scratched the surface of what is out there, and what is possible. That is one of the the things I love most about programming - there is so much to learn, and you can always grow! It is not enough for me to be content with just being able to use these magic words, I want to delve deeper and help to write new ones. Programming represents a powerful tool, but it also enables you with the power to understand it and build your own tools, your own Bootstrap, your own Appveyor, or whatever else you dream of at night.</p>
+<p>It seems popular to claim that programming is a dying art - we have already built what needs to be built, desgined what needs designing, and thought about all the problems that need thinking about; all that is left is for machines to take over and churn out code like a factory churns out cars. To this notion I politely disagree - the art of learning and growing is one we will never replace.</p>
+<hr />
+<p><em>This is a blog written by a guy who loves to talk about Programming. Thanks for reading, and I hope you return after I write some technical posts!</em></p>
 
 
                     </article>
@@ -283,7 +166,7 @@ private const var MaxiumumWords = 500;
 
                         var disqus_config = function () {
                             this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-                            this.page.identifier = 'C Sharp general Conventions'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            this.page.identifier = 'A retrospective from 2 years of building Sites'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
 
                         (function () { // DON'T EDIT BELOW THIS LINE
@@ -322,7 +205,7 @@ private const var MaxiumumWords = 500;
         </li>
         <li>
             <a class="btn-floating btn-large li-bg waves-effect waves-light"
-               onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href + '&summary=C Sharp general Conventions', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600' ); return false;">
+               onclick="javascript: window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.href + '&summary=A retrospective from 2 years of building Sites', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600' ); return false;">
                 <i class="fa fa-linkedin"> </i>
             </a>
         </li>
