@@ -20,7 +20,8 @@ My editor of choice was [Codio](), and after a little work I figured out how to 
 
 The hard work payed off and helped me land an internship at a Web Development Agency where I very quickly learned that I had only taken a small step into the world of Web Development.
 
-![http://puu.sh/usI4e/059a6804a1.png](http://puu.sh/usI4e/059a6804a1.png) *The original site*
+<img src="http://puu.sh/usI4e/059a6804a1.png" style="width: 600px;" />
+*The original site*
 
 - - -
 I've learned a lot since then. Here are the 5 things I would share with myself 2 years ago, given the chance.
@@ -32,12 +33,12 @@ I've learned a lot since then. Here are the 5 things I would share with myself 2
 5. **Don't be afraid to talk to people and ask questions.** It is easy to get lost in the code and just keep trying new things, especially when we are stuck on something, As a group, we seem to have trouble admitting when we are stuck instead of asking for help. Ask a team mate for their thoughts, or pose a question online, or just go find a friend who you can explain your problem to. If what you're doing seems incredibly hard, there's probably a different way, so find it!
 
 - - -
-Now it is twoyears later and I have replaced my old site with this hand-built blog. Compared to the first site, the description of how this site is works sounds like a wizard spouting made-up magical words:
+Now it is two years later and I have replaced my old site with this hand-built blog. Compared to the first site, the description of how this site is works sounds like a wizard spouting made-up magical words:
 >"The site uses a Fluently Configured engine written in C# that is curently setup to consume Markdown documents and dynamically insert them in Razor partial files, where Metadata is then used to organize and display them styled using Google's Material Design. Content is easy to update, just push up a commit on an orphaned branch and Appveyor will run the Generator code and push the updated site to Github Pages for hosting!"
 
 *(Don't worry, if you want to expand your spellbook, I will be writing up an in-depth post on how it all works later!)*
 
-To the casual observer, I probably seem to now be a master of my craft, one who has absorbed the knowledge of my mentors and is ready to join their ranks. Yet I know I have still only just scratched the surface of what is out there, and what is possible. That is one of the the things I love most about programming - there is so much to learn, and you can always grow! It is not enough for me to be content with just being able to use these magic words, I want to delve deeper and help to write new ones. Programming represents a powerful tool, but it also enables you with the power to understand it and build your own tools, your own Bootstrap, your own Appveyor, or whatever else you dream of at night.
+To the casual observer, I might seem to now be a master of my craft, one who has absorbed the knowledge of my mentors and is ready to join their ranks. Yet I know I have still only just scratched the surface of what is out there, and what is possible. That is one of the the things I love most about programming - there is so much to learn, and you can always grow! It is not enough for me to be content with just being able to use these magic words, I want to delve deeper and help to write new ones. Programming represents a powerful tool, but it also enables you with the power to understand it and build your own tools, your own Bootstrap, your own Appveyor, or whatever else you dream of at night.
 
 It seems popular to claim that programming is a dying art - we have already built what needs to be built, desgined what needs designing, and thought about all the problems that need thinking about; all that is left is for machines to take over and churn out code like a factory churns out cars. To this notion I politely disagree - the art of learning and growing is one we will never replace.
 

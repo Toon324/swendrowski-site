@@ -1,5 +1,5 @@
 Published: 03-01-17
-Title: C Sharp general Conventions
+Title: csharp general Conventions
 PromoImageUrl: http://www.hindscc.edu/Assets/images/careertech-hinds-computer-programmer-code.jpg
 Category: csharp
 Intro: A few quick and easy rules pulled from technical documentation I once wrote
