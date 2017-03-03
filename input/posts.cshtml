@@ -6,7 +6,7 @@
         <span class="hide" data-category="csharp">C#</span>
         <span class="hide" data-category="general">General</span>
     </h3>
-    @foreach (var doc in Documents["Posts"].OrderBy(x => Convert.ToDateTime(x["Published"]))
+    @foreach (var doc in Documents["Posts"].OrderBy(x => Convert.ToDateTime(x["Published"])))
     {
         <div class="col-sm-6 hide" data-category="@doc["Category"]">
             <div class="elegant-card z-depth-1 hoverable">
