@@ -1,6 +1,6 @@
 Published: 06/06/2016
 Title: A retrospective from 2 years of building Sites
-PromoImageUrl: http://mdbootstrap.com/images/slides/slide%20(16).jpg
+PromoImageUrl: http://coursework.vschool.io/content/images/2015/12/Blueprint_banner.jpg
 Category: general
 Intro: Thoughts on what I have learned over 2 years, and why programming is great.
 ---
