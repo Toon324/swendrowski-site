@@ -6,7 +6,7 @@
         <span class="hide" data-category="csharp">C#</span>
         <span class="hide" data-category="general">General</span>
     </h3>
-    @foreach (var doc in Documents["Posts"].OrderByDescending(x => Convert.ToDateTime(x["Published"])))
+    @foreach (var doc in Documents["Posts"].OrderByDescending(x => x.Get<DateTime>("Published")))
     {
         <div class="col-sm-6 hide" data-category="@doc["Category"]">
             <div class="elegant-card z-depth-1 hoverable">
@@ -28,7 +28,7 @@
                 <!-- Footer -->
                 <div class="card-footer">
                     <ul class="list-inline">
-                        <li data-timestamp="@Convert.ToDateTime(doc["Published"])"><i class="fa fa-clock-o"></i>@doc["Published"]</li>
+                        <li data-timestamp="@doc.Get<DateTime>("Published")"><i class="fa fa-clock-o"></i>@doc["Published"]</li>
                         <li><i class="fa fa-comments-o"></i><a href="@doc["PostFile"]#disqus_thread">0</a></li>
                     </ul>
                 </div>
