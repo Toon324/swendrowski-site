@@ -1,4 +1,4 @@
-Published: 06-19-16
+Published: 03-01-17
 Title: C Sharp general Conventions
 PromoImageUrl: http://www.hindscc.edu/Assets/images/careertech-hinds-computer-programmer-code.jpg
 Category: csharp
