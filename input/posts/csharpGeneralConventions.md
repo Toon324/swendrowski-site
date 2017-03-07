@@ -50,6 +50,7 @@ OrganizeAlphabetically()
 
 <br>
 **DO:** Declare each variable independently, not in the same statement.
+
 > Good:
 ```cs
 var magicNumber = 42;
@@ -64,6 +65,7 @@ var magicNumber = 42, counter = 1, minumum = 100;
 
 <br>
 **DO:** Always use curly braces for conditional statements.
+
 > Good:
 ```cs
 if (theAnswer == 42)
@@ -85,6 +87,7 @@ else
 ```
 
 **DO:** Use C#'s overloaded `==` operators for string comparisons instead of `string.Equals()`
+
 > Good:
 ```cs
 if (message == "Hello")
@@ -101,6 +104,7 @@ if (message.Equals("Hello"))
 ```
 
 **DO:** Keep basic Get / Set Properties on one line
+
 > Good:
 >
 > ```cs
@@ -118,6 +122,7 @@ public String Name
 
 <br>
 **DO:** Favor Method Properties over Getter and Setter methods for basic values
+
 > Good:
 ```cs
 public String Name { get; set; }
