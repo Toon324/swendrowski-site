@@ -21,9 +21,9 @@ As a general rule-of-thumb, methods should be no longer than 15 lines long.
 // Returns a list of all results and organizes them alphabetically
 GetOrganizedResults()
 {
-  // Get Results
-  // Organize List
-  // Return
+    // Get Results
+    // Organize List
+    // Return
 }
 ```
 
@@ -34,12 +34,12 @@ GetOrganizedResults()
 // Returns a list of all results
 GetResults() 
 {
-  // Return Results
+    // Return Results
 }
 // Organizes a list of results alphabetically
 OrganizeAlphabetically()
 {
-  // Organize List
+    // Organize List
 }
 ```
 
@@ -48,7 +48,6 @@ OrganizeAlphabetically()
 
 **DO:** Try to use one class per file; Consider nested classes carefully.
 
-<br>
 **DO:** Declare each variable independently, not in the same statement.
 
 > Good:
@@ -63,27 +62,26 @@ var minimum = 100;
 var magicNumber = 42, counter = 1, minumum = 100;
 ```
 
-<br>
 **DO:** Always use curly braces for conditional statements.
 
 > Good:
 ```cs
 if (theAnswer == 42)
 {
-	DoSomething();
+    DoSomething();
 }
 else
 {
-	DoSomethingElse();
+    DoSomethingElse();
 }
 ```
 
 > Bad:
 ```cs
 if (theAnswer == 42)
-	DoSomething();
+    DoSomething();
 else
-	DoSomethingElse();
+    DoSomethingElse();
 ```
 
 **DO:** Use C#'s overloaded `==` operators for string comparisons instead of `string.Equals()`
@@ -92,14 +90,14 @@ else
 ```cs
 if (message == "Hello")
 {
-	DoSomething();
+    DoSomething();
 }
 ```
 > Bad:
 ```cs
 if (message.Equals("Hello"))
 {
-	DoSomething();
+    DoSomething();
 }
 ```
 
@@ -115,12 +113,11 @@ if (message.Equals("Hello"))
 ```cs
 public String Name
 {
-	get;
-	set;
+    get;
+    set;
 }
 ```
 
-<br>
 **DO:** Favor Method Properties over Getter and Setter methods for basic values
 
 > Good:
@@ -132,7 +129,7 @@ public String Name { get; set; }
 ```cs
 public int Total
 {
-	get { return 5 + 5; }
+    get { return 5 + 5; }
 }
 ```
 
@@ -141,11 +138,11 @@ public int Total
 private _name = string.Empty;
 public string GetName()
 {
-	return _name;
+    return _name;
 }
 public void SetName(string toSet)
 {
-	_name = toSet;
+    _name = toSet;
 }
 ```
 
