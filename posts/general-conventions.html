@@ -134,9 +134,9 @@
 <pre><code class="language-cs">// Returns a list of all results and organizes them alphabetically
 GetOrganizedResults()
 {
-  // Get Results
-  // Organize List
-  // Return
+    // Get Results
+    // Organize List
+    // Return
 }
 </code></pre>
 <blockquote>
@@ -145,18 +145,17 @@ GetOrganizedResults()
 <pre><code class="language-cs">// Returns a list of all results
 GetResults() 
 {
-  // Return Results
+    // Return Results
 }
 // Organizes a list of results alphabetically
 OrganizeAlphabetically()
 {
-  // Organize List
+    // Organize List
 }
 </code></pre>
 <h2>Formatting</h2>
 <p><strong>DO:</strong> Try to use one class per file; Consider nested classes carefully.</p>
-<br>
-**DO:** Declare each variable independently, not in the same statement.
+<p><strong>DO:</strong> Declare each variable independently, not in the same statement.</p>
 <blockquote>
 <p>Good:</p>
 </blockquote>
@@ -169,27 +168,26 @@ var minimum = 100;
 </blockquote>
 <pre><code class="language-cs">var magicNumber = 42, counter = 1, minumum = 100;
 </code></pre>
-<br>
-**DO:** Always use curly braces for conditional statements.
+<p><strong>DO:</strong> Always use curly braces for conditional statements.</p>
 <blockquote>
 <p>Good:</p>
 </blockquote>
 <pre><code class="language-cs">if (theAnswer == 42)
 {
-	DoSomething();
+    DoSomething();
 }
 else
 {
-	DoSomethingElse();
+    DoSomethingElse();
 }
 </code></pre>
 <blockquote>
 <p>Bad:</p>
 </blockquote>
 <pre><code class="language-cs">if (theAnswer == 42)
-	DoSomething();
+    DoSomething();
 else
-	DoSomethingElse();
+    DoSomethingElse();
 </code></pre>
 <p><strong>DO:</strong> Use C#'s overloaded <code>==</code> operators for string comparisons instead of <code>string.Equals()</code></p>
 <blockquote>
@@ -197,7 +195,7 @@ else
 </blockquote>
 <pre><code class="language-cs">if (message == &quot;Hello&quot;)
 {
-	DoSomething();
+    DoSomething();
 }
 </code></pre>
 <blockquote>
@@ -205,7 +203,7 @@ else
 </blockquote>
 <pre><code class="language-cs">if (message.Equals(&quot;Hello&quot;))
 {
-	DoSomething();
+    DoSomething();
 }
 </code></pre>
 <p><strong>DO:</strong> Keep basic Get / Set Properties on one line</p>
@@ -217,12 +215,11 @@ else
 </blockquote>
 <pre><code class="language-cs">public String Name
 {
-	get;
-	set;
+    get;
+    set;
 }
 </code></pre>
-<br>
-**DO:** Favor Method Properties over Getter and Setter methods for basic values
+<p><strong>DO:</strong> Favor Method Properties over Getter and Setter methods for basic values</p>
 <blockquote>
 <p>Good:</p>
 </blockquote>
@@ -233,7 +230,7 @@ else
 </blockquote>
 <pre><code class="language-cs">public int Total
 {
-	get { return 5 + 5; }
+    get { return 5 + 5; }
 }
 </code></pre>
 <blockquote>
@@ -242,11 +239,11 @@ else
 <pre><code class="language-cs">private _name = string.Empty;
 public string GetName()
 {
-	return _name;
+    return _name;
 }
 public void SetName(string toSet)
 {
-	_name = toSet;
+    _name = toSet;
 }
 </code></pre>
 <h2>Commenting</h2>
