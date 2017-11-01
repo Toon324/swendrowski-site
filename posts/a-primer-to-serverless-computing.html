@@ -126,7 +126,7 @@
                         <p>Let's clear up one thing right away: &quot;Serverless&quot; computing still runs on some server, somewhere. Where that server is, how it is hosted, how often it is running, when it is updated - all of these things don't matter to you, the Developer. You write code, your platform of choice deals with the rest.</p>
 <p>To understand why this is so exciting, let's take a brief walk through history and look at where we came from.</p>
 <h2>Hardware Hosting</h2>
-<p><img src="https://stackify.com/wp-content/uploads/2017/05/what-is-function-as-a-service-serverless-architectures-are-here-11196.png" alt="" /></p>
+<img src="https://stackify.com/wp-content/uploads/2017/05/what-is-function-as-a-service-serverless-architectures-are-here-11196.png" width="100%" />
 <p>If you look to your left at the &quot;History of Hosting&quot; exhibit, you may fondly remember the days before the Cloud when everything was hosted in a server somewhere in your building, preferably in a cold isolated room. Companies bought physical devices, set them up with licenses, kept them updated - all so appliations, APIs, and websites could be hosted and made available to the end-user. Plenty of companies still do this for good reasons: once the server is setup, your costs are only for maintenance, updates, and electricity. In-building latency is practically non-existant, and you can keep applications on your in-company network for security.</p>
 <p>For plenty of other companies however, this was a lot of work and money just to have a working server. Server rooms are expensive and require you to setup security protocols to ensure no one tampers with your machines and data, and plan for what happens when power goes out or the building floods. If you had users accessing your app from across the world, latency became an issue. Infrastructure as a Service (Iaas) came along to deal with this and was the first big generation of &quot;Cloud&quot;. Need a Linux server? Spin up a VM! Windows Server? Just as easy! Want servers across the world? Done! Updates still had to be managed yourself, but all of a sudden Licenses and server rooms and availability concerns all started to go away - just pick your OS and what size you want your VM to be. You can even resize them on-the-fly with minimum downtime! For teams who want full control over everything on their server, VM's are still the go-to-choice for Cloud hosting.</p>
 <p>Keeping up with updates and security patches is hard though, and setting up VM's and their access rules requires IT knowledge (and usually an IT team). Developers want to develop, so along came generation 2 of the Cloud - Platform as a Service (PaaS). In Azure, this generation includes offerings such as App Service and Worker Roles. For the common developer, PaaS offered a no-frills no-knowledge-needed way to host code - just write your app and publish, and there it was. OS and Framework updates are handled automatically, configuration of what versions you use are easy to set in a GUI, and you usually get a free DNS to boot. All the developer has to know is how to write code, and what size of server they want their code to run on.</p>
@@ -141,15 +141,9 @@
 <p>Pricing is a big factor - in <a href="https://azure.microsoft.com/en-us/pricing/details/functions/">Azure</a>, pricing is based on 2 metrics: Total # of executions per month, and resources consumed as measured in &quot;GB-s&quot;.</p>
 <p>GB-s is a measure of &quot;how much RAM did your program run for how many seconds&quot;. 1 GB-s is equal to 1 GB of RAM use for 1 second (or .5 GB of RAM use for 2 seconds, and so on). Memory is allocated in 128 MB chunks and execution time is measured in the milliseconds. Even excluding the free grant companies like Azure are currently given, the pricing is extremely cheap - 20 cents per million executions, and 0.0016 cents per GB-S.</p>
 <p>To compare, the cheapest basic App Service (PaaS) instance has 1.75 GB of RAM and charges $0.075/hour.</p>
-<p>If the same Batch Delete app ran on an Always-On Instance, you would have a flat weekly usage of 168 hours.
-If you allowed your app to sleep between uses (slower start-up time), assuming your 100k delete calls took 5 seconds to execute, you would have a usage of 1 hour.
-For serverless, we will assume .5 GB of memory is actually used.</p>
-<p>The breakdown of prices is as follows:</p>
-<p>| Hosting | Price per Week |
-|--------|--------|
-| Always-On       |   $12.60     |
-| Sometimes-On | $0.075 |
-| Serverless | 0.004 cents |</p>
+<p>If the same Batch Delete app ran on an Always-On Instance, you would have a flat weekly usage of 168 hours, for a weekly price of $12.60</p>
+<p>If you allowed your app to sleep between uses (slower start-up time), assuming your 100k delete calls took 5 seconds to execute, you would have a usage of 1 hour, for a weekly price of $0.075</p>
+<p>For serverless, we will assume .5 GB of memory is actually used, for a weekly price of 0.004 cents - a 99.5% reduction in price even from the cheapest, most efficient app service.</p>
 <h2>What Serverless is good for - and what it isn't</h2>
 <h4>Good</h4>
 <ul>
