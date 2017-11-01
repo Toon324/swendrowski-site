@@ -2,7 +2,7 @@ Published: 10/25/2017
 Title: A Primer to Serverless Computing
 PromoImageUrl: https://msdnshared.blob.core.windows.net/media/2016/09/fsharp-functions2.png
 Category: csharp
-Intro: Serverless Computing: The next generation of Cloud
+Intro: Serverless Computing - The next generation of Cloud
 ---
 
 Let's clear up one thing right away: "Serverless" computing still runs on some server, somewhere. Where that server is, how it is hosted, how often it is running, when it is updated - all of these things don't matter to you, the Developer. You write code, your platform of choice deals with the rest.
