@@ -49,6 +49,18 @@ pre code {
 	min-height: 175px;
 }
 
+p {
+    padding-top: 1rem;
+}
+
+.container {
+    width: 80%;
+}
+
+.img-responsive {
+    max-height: 500px;
+}
+
 @media only screen and (max-width: 768px) {
     .card-block {
         padding: 4%;
