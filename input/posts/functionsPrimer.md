@@ -11,7 +11,7 @@ To understand why this is so exciting, let's take a brief walk through history a
 
 ## Hardware Hosting
 
-![](https://stackify.com/wp-content/uploads/2017/05/what-is-function-as-a-service-serverless-architectures-are-here-11196.png)
+<img src="https://stackify.com/wp-content/uploads/2017/05/what-is-function-as-a-service-serverless-architectures-are-here-11196.png" width="100%" />
 
 If you look to your left at the "History of Hosting" exhibit, you may fondly remember the days before the Cloud when everything was hosted in a server somewhere in your building, preferably in a cold isolated room. Companies bought physical devices, set them up with licenses, kept them updated - all so appliations, APIs, and websites could be hosted and made available to the end-user. Plenty of companies still do this for good reasons: once the server is setup, your costs are only for maintenance, updates, and electricity. In-building latency is practically non-existant, and you can keep applications on your in-company network for security.
 
@@ -41,17 +41,12 @@ GB-s is a measure of "how much RAM did your program run for how many seconds". 1
 
 To compare, the cheapest basic App Service (PaaS) instance has 1.75 GB of RAM and charges $0.075/hour.
 
-If the same Batch Delete app ran on an Always-On Instance, you would have a flat weekly usage of 168 hours.
-If you allowed your app to sleep between uses (slower start-up time), assuming your 100k delete calls took 5 seconds to execute, you would have a usage of 1 hour.
-For serverless, we will assume .5 GB of memory is actually used.
+If the same Batch Delete app ran on an Always-On Instance, you would have a flat weekly usage of 168 hours, for a weekly price of $12.60
 
-The breakdown of prices is as follows:
+If you allowed your app to sleep between uses (slower start-up time), assuming your 100k delete calls took 5 seconds to execute, you would have a usage of 1 hour, for a weekly price of $0.075
 
-| Hosting | Price per Week |
-|--------|--------|
-| Always-On       |   $12.60     |
-| Sometimes-On | $0.075 |
-| Serverless | 0.004 cents |
+For serverless, we will assume .5 GB of memory is actually used, for a weekly price of 0.004 cents - a 99.5% reduction in price even from the cheapest, most efficient app service.
+
 
 ## What Serverless is good for - and what it isn't
 
