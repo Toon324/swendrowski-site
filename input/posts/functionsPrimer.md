@@ -11,7 +11,7 @@ To understand why this is so exciting, let's take a brief walk through history a
 
 ## Hardware Hosting
 
-<img src="https://stackify.com/wp-content/uploads/2017/05/what-is-function-as-a-service-serverless-architectures-are-here-11196.png" width="100%" />
+<img src="https://stackify.com/wp-content/uploads/2017/05/what-is-function-as-a-service-serverless-architectures-are-here-11196.png" class="img-responsive" />
 
 If you look to your left at the "History of Hosting" exhibit, you may fondly remember the days before the Cloud when everything was hosted in a server somewhere in your building, preferably in a cold isolated room. Companies bought physical devices, set them up with licenses, kept them updated - all so appliations, APIs, and websites could be hosted and made available to the end-user. Plenty of companies still do this for good reasons: once the server is setup, your costs are only for maintenance, updates, and electricity. In-building latency is practically non-existant, and you can keep applications on your in-company network for security.
 
@@ -23,7 +23,7 @@ This last question is surprisingly hard - "what size of server DO I need to host
 
 ## Software Archetecture
 
-![](http://usblogs.pwc.com/emerging-technology/wp-content/uploads/2017/02/feature02-figure01.jpg)
+<img src="http://usblogs.pwc.com/emerging-technology/wp-content/uploads/2017/02/feature02-figure01.jpg" class="img-responsive" />
 
 Over to your right is the "Hall of Software" exhibit, with our first dispaly - the monolithic app. Some of you may not-so-fondly recall these days where the term "spaghetti code" was born. Everything in the system was joined at weird angles with too-strong glue. Changes in the User registration system could cause errors in the product display pages. Deployments deployed everything at once, and if you were fortunate enough to have a Version Control System (VCS), merge conflicts were abundant. The hosting needs of these apps were simple however - one server, large enough to process everything at once at peak hours. Although the full resources of the server may not have been always utilized, with all of the various pieces running on one system you could usually gurantee a healthly usage of your server resources.
 
