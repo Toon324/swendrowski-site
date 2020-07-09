@@ -10,12 +10,12 @@ Intro: It's like Skyrim! Kinda.
 ### Trigger Happy
 Trigger Happy is the bread and butter of how this works - it allows you to setup a Journal entry with triggers such as "When Actor A is clicked, execute Macro 1"
 
-https://foundryvtt.com/packages/trigger-happy/
+[https://foundryvtt.com/packages/trigger-happy/](https://foundryvtt.com/packages/trigger-happy/)
 
 ### Furnace
 By default, Macros can't accept any sort of data, meaning they can only do one thing. Furnace has an "Advanced Macros" feature that allow us to pass in "arguments" that will let us rotate different puzzle tiles using the same Macro.
 
-https://foundryvtt.com/packages/furnace/
+[https://foundryvtt.com/packages/furnace/](https://foundryvtt.com/packages/furnace/)
 
 ## So you want a puzzle
 
