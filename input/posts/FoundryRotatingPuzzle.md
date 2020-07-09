@@ -5,8 +5,6 @@ Category: foundryvtt
 Intro: It's like Skyrim! Kinda.
 ---
 
-<img src="https://raw.githubusercontent.com/cswendrowski/swendrowski-site/master/input/img/tilepuzzle.gif" class="img-responsive" />
-
 ## Modules used
 
 ### Trigger Happy
