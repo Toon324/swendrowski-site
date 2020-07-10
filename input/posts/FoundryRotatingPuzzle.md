@@ -42,7 +42,7 @@ The Macro does the rotation, but we still need to know when and what to rotate.
 
 For each torch, hide an invisible actor on the torch so the players have something to "click":
 
-<img src="https://raw.githubusercontent.com/cswendrowski/swendrowski-site/master/input/img/puzzletriggeractors.PNG" class="img-responsive" />
+<img src="https://raw.githubusercontent.com/cswendrowski/swendrowski-site/master/input/img/puzzletriggeractors.PNG" class="img center-block" />
 
 Now that there are things to click, Trigger Happy will let us connect each Actor to a Macro call using the format `@Token[Token Name] @Trigger[click] @ChatMessage[/rotatetile TileName]`
 
