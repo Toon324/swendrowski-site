@@ -8,9 +8,9 @@
         using (row.GridColumn().Begin())
         {
             <!--Featured Image-->
-            <div class="view overlay hm-white-slight z-depth-2">
+            <div class="view overlay hm-white-slight z-depth-2 white darken-2 mask pattern-2">
                 @*@Html.Bootstrap().Placeholder(1170, 330)*@
-                <img src="@Metadata["PromoImageUrl"]" class="img-responsive" alt="">
+                <img src="@Metadata["PromoImageUrl"]" class="img center-block" alt="">
             </div>
         }
         using (row.GridColumn().Begin())
